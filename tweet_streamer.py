@@ -26,7 +26,7 @@ SOFTWARE.
 
 
 Python tweet streamer: Searches and downloads tweets in the real time (limited to 1 request/2seconds). The tweets are
-stored as a dictionary of dictionaries using compressed cPickle library standard. The tweets are stored in a separate
+stored as a dictionary of dictionaries using compressed gzip library standard. The tweets are stored in a separate
 archive each day. This is done to clear the RAM and optimize the portability of the data. See README for more details.
 
 In order for this script to work, you need to add your credentials to the TOKENS.txt file. (Use TOKENS.txt.example as
