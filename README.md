@@ -2,7 +2,7 @@
 # Twitter streaming library based on tweepy api  
 
 Python twitter streamer is a script that searches and downloads tweets in the real time (limited to 1 request/3s).
-The tweets are stored as a dictionary of dictionaries using compressed cPickle library standard. The script stores the
+The tweets are stored as a gzip compressed text file with json inside. The script stores the
 data in chunks of one day. This is done to clear the RAM and optimize the portability of the data.
 
 #### Important
@@ -26,8 +26,6 @@ Linux system. It will limit access to the file.
 ### Dependencies
 * Tweepy -  https://github.com/tweepy/tweepy
 	`pip install tweepy`
-* cPickle - https://wiki.python.org/moin/UsingPickle
-	cPickle by default comes with python
 	 
 ### Usage
 
@@ -45,9 +43,8 @@ For example: in order to stream all news tweets related to the election in the U
 ```
 
 ### Data
-The data is stored in zipped cPickle files. Each file contains one day of streaming. This will approach will make data
-management much easier. The tweets itself are in json representation (python dictionary). They are unaltered and may
-have excessive information such as location, re-tweets, etc. An example of reading and working with the data can be
+The data is stored in zipped gzip files. Each file contains one day of streaming. This approach will make data
+management much easier. The tweets itself are in json string representation (python dictionary). They are unaltered and contain information such as location, re-tweets, etc. An example of reading and working with the data can be
 found in tweet_data_reader.py
 
 ### License
