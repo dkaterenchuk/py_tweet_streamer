@@ -28,7 +28,7 @@ Python Tweet Data Reader: This is an example of how to use and process stored tw
 
 This module can be called externally to load the data into RAM for further processing.
 
-To test the script, run the example bellow from commandline. It will read an archive and display top 100 tweets.
+To test the script, run the example bellow from commandline. It will read an archive and display tweets.
 
 Usage:
     python tweet_streamer.py <datafolder_path> 
